@@ -13,8 +13,8 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
+
 $(document).ready(function(){
   $('.material-card > .mc-btn-action').click(function() {
     var card = $(this).parent('.material-card');

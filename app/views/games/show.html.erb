@@ -1,0 +1,21 @@
+<div class="page-header">
+  <%= link_to games_path, class: 'btn btn-default' do %>
+    All Games
+  <% end %>
+  <%= link_to edit_game_path(@game), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show game</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @game.title %></dd>
+
+  <dt>Image:</dt>
+  <dd><%= @game.image %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @game.description %></dd>
+
+</dl>

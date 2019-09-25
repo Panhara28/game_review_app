@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_19_112157) do
+ActiveRecord::Schema.define(version: 2019_09_25_030710) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "published_at"
@@ -34,11 +34,11 @@ ActiveRecord::Schema.define(version: 2019_09_19_112157) do
 
   create_table "games", force: :cascade do |t|
     t.string "title"
-    t.text "description"
     t.string "image"
-    t.integer "user_id"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "rating"
   end
 
   create_table "notifications", force: :cascade do |t|
