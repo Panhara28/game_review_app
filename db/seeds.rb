@@ -1,7 +1,48 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+GAMES = [
+    {
+			:title => "Pubg", 
+			image: "pubg.jpg",
+			rating: 5,
+			description: "Awesome Games On The Earth"
+		},
+    {
+			:title => "Dota 2", 
+			image: "dota2.jpg",
+			rating: 5,
+			description: "Awesome Games On The Earth"
+		},
+    {
+			:title => "Fornite", 
+			image: "fortnite.jpg",
+			rating: 5,
+			description: "Awesome Games On The Earth"
+		},
+    {
+			:title => "LOL", 
+			image: "lol.png",
+			rating: 5,
+			description: "Awesome Games On The Earth"
+		},
+		{
+			:title => "GTA V", 
+			image: "gta.jpg",
+			rating: 5,
+			description: "Awesome Games On The Earth"
+		},
+		{
+			:title => "Mario", 
+			image: "mario.jpg",
+			rating: 5,
+			description: "Awesome Games On The Earth"
+		}
+]
+
+GAMES.map do |game|
+  Game.find_or_create_by!(
+		title: game[:title], 
+		image: game[:image],
+		rating: game[:rating],
+		description: game[:description]
+	)
+end
+
