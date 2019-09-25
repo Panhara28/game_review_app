@@ -1,2 +1,42 @@
-<h1>Welcome to Jumpstart!</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+<section class="container">
+  <div class="row">
+    <div class="col-lg-12" style="margin-top: 20px; margin-bottom: 20px;">
+      <div class="page-header text-center">
+        <h1>Popular Games<br></h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="row active-with-click">
+    <section class="container">
+      <div class="row active-with-click">
+        <%@games.each do |game|%>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Red">
+              <h2>
+                <span><%=game.user.id%></span>
+                <strong>
+                  <i class="fa fa-star"></i>
+                  <%=game.title%>
+                </strong>
+              </h2>
+              <div class="mc-content">
+                <div class="img-container">
+                  <img class="img-responsive" src="<%=game.image%>">
+                </div>
+                <div class="mc-description">
+                  <%=game.description%>
+                </div>
+              </div>
+              <a class="mc-btn-action">
+                <i class="fa fa-bars"></i>
+              </a>
+              <div class="mc-footer">
+                <%=link_to "More Detail", game_path(game), class: "btn btn-detail"%>
+              </div>
+            </article>
+          </div>
+        <%end%>
+      </div>
+    </section>
+  </section>
